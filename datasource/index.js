@@ -12,6 +12,7 @@ var extend = require('util')._extend;
 var wsModels = require('loopback-workspace').models;
 var actions = require('../lib/actions');
 var helpers = require('../lib/helpers');
+var helpText = require('../lib/help');
 var validateRequiredName = helpers.validateRequiredName;
 var objectValidator = helpers.objectValidator;
 var path = require('path');
@@ -36,7 +37,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    return helpers.customHelp(this);
+    return helpText.customHelp(this, null, 'loopback_datasource_usage.txt');
   },
 
   loadConnectors: function() {

@@ -14,6 +14,7 @@ var ModelAccessControl = wsModels.ModelAccessControl;
 
 var actions = require('../lib/actions');
 var helpers = require('../lib/helpers');
+var helpText = require('../lib/help');
 
 module.exports = yeoman.Base.extend({
   // NOTE(bajtos)
@@ -22,7 +23,7 @@ module.exports = yeoman.Base.extend({
   // saving project changes.
 
   help: function() {
-    return helpers.customHelp(this);
+    return helpText.customHelp(this, null, 'loopbacl_acl_usage.txt');
   },
 
   loadProject: actions.loadProject,

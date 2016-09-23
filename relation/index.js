@@ -15,6 +15,7 @@ var ModelRelation = workspace.models.ModelRelation;
 
 var actions = require('../lib/actions');
 var helpers = require('../lib/helpers');
+var helpText = require('../lib/help');
 var validateOptionalName = helpers.validateOptionalName;
 var validateRequiredName = helpers.validateRequiredName;
 var checkRelationName = helpers.checkRelationName;
@@ -23,7 +24,7 @@ var checkPropertyName = helpers.checkPropertyName;
 module.exports = yeoman.Base.extend({
 
   help: function() {
-    return helpers.customHelp(this);
+    return helpText.customHelp(this, null, 'loopback_relation_usage.txt');
   },
 
   loadProject: actions.loadProject,

@@ -10,6 +10,7 @@ var g = require('strong-globalize')();
 var fs = require('fs');
 var yeoman = require('yeoman-generator');
 var helpers = require('../lib/helpers');
+var helpText = require('../lib/help');
 var apiGenerator = require('loopback-api-definition');
 var mkdirp = require('mkdirp');
 
@@ -28,7 +29,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    return helpers.customHelp(this);
+    return helpText.customHelp(this, null, 'loopback_export-api-def_usage.txt');
   },
 
   generate: function() {
