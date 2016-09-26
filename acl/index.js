@@ -23,7 +23,7 @@ module.exports = yeoman.Base.extend({
   // saving project changes.
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopbacl_acl_usage.txt');
+    return helpText.customHelp(this, null, 'loopback_acl_usage.txt');
   },
 
   loadProject: actions.loadProject,
