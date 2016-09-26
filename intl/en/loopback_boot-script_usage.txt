@@ -3,6 +3,6 @@ Description:
 
 Example:
 
-  slc loopback:boot-script [your-script-name]
+  {{slc loopback:boot-script}} [your-script-name]
 
-  This generates a boot script in `/server/boot`.
+  This generates a boot script in {{`/server/boot`}}.
