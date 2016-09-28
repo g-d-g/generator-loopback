@@ -6,6 +6,9 @@
 /*global describe, beforeEach, afterEach, it */
 'use strict';
 var path = require('path');
+var SG = require('strong-globalize');
+SG.SetRootDir(path.join(__dirname, '..'), {autonomousMsgLoading: 'all'});
+
 var helpers = require('yeoman-test');
 var wsModels = require('loopback-workspace').models;
 var SANDBOX =  path.resolve(__dirname, 'sandbox');
