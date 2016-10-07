@@ -55,7 +55,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    var msgs = [helpText.customHelp(this, null, 'loopback_app_usage.txt')];
+    var msgs = [helpText.customHelp(this, 'loopback_app_usage.txt')];
     msgs.push(g.f('Available generators: \n\n  '));
     msgs.push(Object.keys(this.options.env.getGeneratorsMeta())
       .filter(function(name) {

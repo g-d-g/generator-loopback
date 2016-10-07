@@ -37,7 +37,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopback_datasource_usage.txt');
+    return helpText.customHelp(this, 'loopback_datasource_usage.txt');
   },
 
   loadConnectors: function() {

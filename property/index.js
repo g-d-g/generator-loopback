@@ -24,7 +24,7 @@ module.exports = yeoman.Base.extend({
   // saving project changes.
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopback_property_usage.txt');
+    return helpText.customHelp(this, 'loopback_property_usage.txt');
   },
 
   loadProject: actions.loadProject,

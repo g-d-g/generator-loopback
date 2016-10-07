@@ -24,7 +24,7 @@ var checkPropertyName = helpers.checkPropertyName;
 module.exports = yeoman.Base.extend({
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopback_relation_usage.txt');
+    return helpText.customHelp(this, 'loopback_relation_usage.txt');
   },
 
   loadProject: actions.loadProject,

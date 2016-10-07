@@ -29,7 +29,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopback_export-api-def_usage.txt');
+    return helpText.customHelp(this, 'loopback_export-api-def_usage.txt');
   },
 
   generate: function() {

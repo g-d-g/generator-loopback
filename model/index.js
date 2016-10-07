@@ -43,7 +43,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopback_model_usage.txt');
+    return helpText.customHelp(this, 'loopback_model_usage.txt');
   },
 
   loadProject: actions.loadProject,

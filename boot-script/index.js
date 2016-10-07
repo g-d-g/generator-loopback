@@ -27,7 +27,7 @@ module.exports = yeoman.Base.extend({
   },
 
   help: function() {
-    return helpText.customHelp(this, null, 'loopback_boot-script_usage.txt');
+    return helpText.customHelp(this, 'loopback_boot-script_usage.txt');
   },
 
   askForName: function() {
