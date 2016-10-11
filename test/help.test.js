@@ -46,18 +46,20 @@ describe('loopback generator help', function() {
     process.env.SLC_COMMAND = undefined;
   });
 
-  it('prints right help message for each generator', function() {
-    process.env.SLC_COMMAND = 'loopback --help';
-    var names = ['acl', 'app', 'boot-script', 'datasource', 'export-api-def',
+  describe('prints right help message for each generator', function() {
+    process.env.SLC_COMMAND = 'slc loopback --help';
+    var cmdNames = ['acl', 'app', 'boot-script', 'datasource', 'export-api-def',
     'middleware', 'model', 'property', 'relation', 'remote-method', 'swagger'];
 
-    names.forEach(function(name) {
-      var gen = givenGenerator(name, ['--help']);
-      var helpText = gen.help();
-      var helpFileName = 'loopback_' + name + '_help.txt';
-      var helpFilePath = '../fixtures/' + helpFileName;
-      var output = fs.readFileSync(helpFilePath, 'utf8');
-      assert.equal(output, helpText);
+    cmdNames.forEach(function(name) {
+      it('prints right help message for generator ' + name, function() {
+        var gen = givenGenerator(name, ['--help']);
+        var helpText = gen.help();
+        var helpFileName = 'loopback_' + name + '_help.txt';
+        var helpFilePath = '../fixtures/' + helpFileName;
+        var output = fs.readFileSync(helpFilePath, 'utf8');
+        assert.equal(output, helpText);
+      });
     });
     process.env.SLC_COMMAND = undefined;
   });
