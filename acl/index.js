@@ -5,7 +5,7 @@
 
 'use strict';
 
-var g = require('strong-globalize')();
+var g = require('../lib/globalize');
 var yeoman = require('yeoman-generator');
 var async = require('async');
 

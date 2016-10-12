@@ -5,7 +5,7 @@
 
 'use strict';
 
-var g = require('strong-globalize')();
+var g = require('../lib/globalize');
 var helpers = require('../lib/helpers');
 var helpText = require('../lib/help');
 
